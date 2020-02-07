@@ -1,17 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url("https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-3.jpg") ;
     /* -webkit-background-size: cover; */
     background-size: cover;
+    width: 100vw;
+}
+
+.navbar{
+    width: 100vw;
 }
 
 #card-home{
-    margin: auto;
-    width: 20%;
-    padding-top: 10%;
+    width: 100vw;
+    padding-top: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.col-md-3{
+    padding-bottom: 3%;
+    
 }
 
 .copyright {
     background-color:#C05805;
     padding: 12px 0;
     font-size:14px;
+}
+
+footer{
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
 }
