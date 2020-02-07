@@ -211,9 +211,14 @@ footer{
 
 #sign-in ,#sign-up {
     position: relative;
-    width:30%;
+    width:40%;
     margin: 30px auto;
     padding: 50px;
     box-sizing: border-box;
     background-color: white;
+}
+
+.nav-link{
+    color: black;
+    
 }
