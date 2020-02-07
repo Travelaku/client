@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id"
     content="23781630798-g5h88k310oh2vrijv70m6p37iv03j5k0.apps.googleusercontent.com">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/style.css">
   <link rel="shorcut icon" href="https://image.flaticon.com/icons/svg/776/776541.svg" type="svg">
   <title> TravelAku</title>
@@ -19,17 +20,18 @@
     <nav class="navbar navbar-expand-lg" style="background-color: #C05805;">
       <img src="https://image.flaticon.com/icons/svg/776/776541.svg" alt="" width="3%">
       <a class="navbar-brand" style="color: black;" href="#">TravelAku</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#" >Home </a>
+            <a class="nav-link" href="#">Home </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" >Explore </a>
+            <a class="nav-link" href="#">Explore </a>
           </li>
         </ul>
       </div>
@@ -38,109 +40,117 @@
       <button type="button" class="btn btn-outline-light" id="sign-in-navbar">Sign In</button>
     </nav>
   </div>
-  
+
   <div id="search-location">
     <h3>Explore by Location</h3>
-    <form class="form-inline" style="align-items: center;padding-right: 271px;">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="location">
+    <form class="form-inline" id="searchForm" style="align-items: center;padding-right: 271px;">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="location"
+        id="searchInput">
       <button class="btn btn-warning" type="submit">Search</button>
     </form>
   </div>
 
   <!-- CARD -->
-  <div >
+  <div>
     <h2>Attractions</h2>
     <div id="card-attraction" class="row" style="display: flex; justify-content: center; width: 100%;">
     </div>
   </div>
-  
-  <div >
+
+  <div>
     <h2>Hotel and Accomodation</h2>
     <div id="card-hotels" class="row" style="display: flex; justify-content: center; width: 100%;">
     </div>
   </div>
 
-<!-- Public-Holiday -->
+  <!-- Public-Holiday -->
 
   <div id="public-holiday">
     <section>
-        <div class="leftBox">
-            <div class="content">
-              <h1>Events And Show</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, magnam doloremque. Et nisi accusamus ab quia fuga placeat animi tenetur eum repellat rem quod, corrupti dolore illo quas sequi debitis.</p>
-            </div>
-         </div>
-        <div class="events">
-          <div id="year">
-              <h1></h1>
-          </div>
-          <ul id="dating">
-          </ul>
+      <div class="leftBox">
+        <div class="content">
+          <h1>Events And Show</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, magnam doloremque. Et nisi accusamus ab
+            quia fuga placeat animi tenetur eum repellat rem quod, corrupti dolore illo quas sequi debitis.</p>
         </div>
-      </section>
+      </div>
+      <div class="events">
+        <div id="year">
+          <h1></h1>
+        </div>
+        <ul id="dating">
+        </ul>
+      </div>
+    </section>
   </div>
 
 
   <!-- SIGN UP -->
-  <div id="sign-up" >
-      <center>
-          <form style="width:55%;">
-              <h2>Sign Up</h2>
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" id="emailRegister" class="form-control"  aria-describedby="emailHelp">
-              </div>
-              <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" id="passwordRegister" class="form-control">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          <h2 style="margin: 30px auto">OR</h2>
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      </center>
+  <div id="sign-up">
+    <center>
+      <form style="width:55%;">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" id="emailRegister" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" id="passwordRegister" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h2 style="margin: 30px auto">OR</h2>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </center>
   </div>
 
   <!-- SIGN IN -->
-  <div id="sign-in" >
-      <center>
-          <form style="width:55%;">
-              <h2>Sign In</h2>
-              <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" id="emailLogin" class="form-control" aria-describedby="emailHelp">
-              </div>
-              <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" id="passwordLogin" class="form-control">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          <h2 style="margin: 30px auto">OR</h2>
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
-          <!-- <a href="#" onclick="signOut();">Sign out</a> -->
-      </center>
+  <div id="sign-in">
+    <center>
+      <form style="width:55%;">
+        <h2>Sign In</h2>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" id="emailLogin" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" id="passwordLogin" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h2 style="margin: 30px auto">OR</h2>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+    </center>
   </div>
   <!-- FOOTER -->
   <footer>
     <!-- <section class="copyright"> -->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 ">
-						<div class="text-center text-white">
-							 <font color="black">&copy; 2018 TravelAku. All Rights Reserved. </font>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- </section> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <div class="text-center text-white">
+            <font color="black">&copy; 2018 TravelAku. All Rights Reserved. </font>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </section> -->
   </footer>
 
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="./assets/scripts/main.js"></script>

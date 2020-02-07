@@ -26,85 +26,152 @@ function showPublicHoliday() {
     url: "http://localhost:3000/api/publicHoliday",
     method: "GET"
   })
-    .done(function(holidayDate) {
-      console.log(holidayDate)
+    .done(function (holidayDate) {
       let currentYear = new Date().getFullYear()
       $("#public-holiday #year h1").append(`
       <h1 style="">${currentYear} Indonesian Public Holiday</h1>
       `)
-      let arr = ['JAN', 'FEB','MAR', 'APR', 'MEI', 'JUN', 'JUL','AUG', 'SEP', 'OKT', 'NOV', 'DES']
+      let arr = ['JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DES']
       holidayDate.data.forEach(element => {
-        let month = +element.date.slice(5,7)
-        let tanggal = element.date.slice(8,10)
+        let month = +element.date.slice(5, 7)
+        let tanggal = element.date.slice(8, 10)
         $("#public-holiday #dating").append(
           `
-               <li>
-                  <div class="time">
-                    <h2>${arr[month-1]}</h2>
-                  </div> 
-                  <div class="details">
-                    <div class="date">
-                      <h2>${tanggal}</h2>
-                    </div>  
-                    <h3>${element.localName}</h3> 
-                  </div>
-                  <div style="clear: both;"> </div>
-                </li>
+            <li>
+                <div class="time">
+                  <h2>${arr[month - 1]}</h2>
+                </div> 
+                <div class="details">
+                  <div class="date">
+                    <h2>${tanggal}</h2>
+                  </div>  
+                  <h3>${element.localName}</h3> 
+                </div>
+                <div style="clear: both;"> </div>
+              </li>
           `
         )
       });
     })
-    .fail(function(err) {
+    .fail(function (err) {
       console.log(err)
     })
 }
 
-function fetchAttrachtion(){
+// function fetchAttrachtion(){
+//   $.ajax({
+//     url: "http://localhost:3000/api/attractions",
+//     method: "GET"
+//   })
+//   .done(attractions=>{
+//     console.log(attractions)
+//     attractions.forEach(el=>{
+//       if(el){
+//         $("#card-attraction").append(
+//           `
+//           <div class="col-md-4">
+//             <div class="card bg-light mb-4" style="height:550px;" >
+//               <div class="card-body">
+//                 <h5 id="card-name">${el.name}</h5>
+//                 <img src="${el.image_url}" alt="" width="100%" height="240px" style="padding-bottom: 10%;">
+//                 <h6>Rating:</h6>
+//                 <p id="card-rating">${el.rating}</p>
+//                 <h6>Addres :</h6>
+//                 <p id="card-price">${el.address}</p>
+//                 <a href="#" class="btn btn-primary">Details</a>
+//               </div>
+//             </div>
+//           </div>
+//           `
+//         ) 
+//       }
+//     })
+//   })
+//   .fail(err =>{
+//     console.log(err)
+//   })  
+// }
+
+// function fetchHotels(){
+//   $.ajax({
+//     url: "http://localhost:3000/api/hotels",
+//     method: "GET"
+//   })
+//   .done(attractions=>{
+//     console.log(attractions)
+//     attractions.forEach(el=>{
+//       if(el){
+//         $("#card-hotels").append(
+//           `
+//           <div class="col-md-4">
+//             <div class="card bg-light mb-4" style="height:550px;" >
+//               <div class="card-body">
+//                 <h5 id="card-name">${el.name}</h5>
+//                 <img src="${el.image_url}" alt="" width="100%" height="240px" style="padding-bottom: 10%;">
+//                 <h6>Rating:</h6>
+//                 <p id="card-rating">${el.rating}</p>
+//                 <h6>Price :</h6>
+//                 <p id="card-price">${el.price}</p>
+//                 <a href="#" class="btn btn-primary">Details</a>
+//               </div>
+//             </div>
+//           </div>
+//           `
+//         ) 
+//       }
+//     })
+//   })
+//   .fail(err =>{
+//     console.log(err)
+//   })  
+// }
+
+function fetchData(address) {
   $.ajax({
-    url: "http://localhost:3000/api/attractions",
-    method: "GET"
+    url: "http://localhost:3000/api/getdata",
+    method: "post",
+    data: {
+      address
+    }
   })
-  .done(attractions=>{
-    console.log(attractions)
-    attractions.forEach(el=>{
-      if(el){
-        $("#card-attraction").append(
-          `
-          <div class="col-md-4">
+    .done(data => {
+      console.log(data)
+      fetchAttraction(data.attractions)
+      fetchHotels(data.hotels)
+    })
+    .fail(err => {
+      console.log(err)
+    })
+}
+
+function fetchAttraction(attractions) {
+  $("#card-attraction").empty()
+  attractions.forEach(el => {
+    if (el) {
+      $("#card-attraction").append(
+        ` <div class="col-md-4">
             <div class="card bg-light mb-4" style="height:550px;" >
               <div class="card-body">
                 <h5 id="card-name">${el.name}</h5>
                 <img src="${el.image_url}" alt="" width="100%" height="240px" style="padding-bottom: 10%;">
                 <h6>Rating:</h6>
-                <p id="card-rating">${el.rating}</p>
+                <p id="card-address">${el.address}</p>
                 <h6>Addres :</h6>
-                <p id="card-price">${el.address}</p>
+                <p id="card-type">${el["category/type"]}</p>
                 <a href="#" class="btn btn-primary">Details</a>
               </div>
             </div>
-          </div>
-          `
-        ) 
-      }
-    })
+          </div> `
+      )
+    }
   })
-  .fail(err =>{
-    console.log(err)
-  })  
 }
 
-function fetchHotels(){
-  $.ajax({
-    url: "http://localhost:3000/api/hotels",
-    method: "GET"
-  })
-  .done(attractions=>{
-    console.log(attractions)
-    attractions.forEach(el=>{
-      if(el){
-        $("#card-hotels").append(
-          `
-          <div class="col-md-4">
+function fetchHotels(hotels) {
+  hotels.forEach(el => {
+    if (el) {
+      $("#card-hotels").append(
+        ` <div class="col-md-4">
             <div class="card bg-light mb-4" style="height:550px;" >
               <div class="card-body">
                 <h5 id="card-name">${el.name}</h5>
@@ -116,21 +183,19 @@ function fetchHotels(){
                 <a href="#" class="btn btn-primary">Details</a>
               </div>
             </div>
-          </div>
-          `
-        ) 
-      }
-    })
+          </div>`
+      )
+    }
   })
-  .fail(err =>{
-    console.log(err)
-  })  
 }
 
 
-
-$(document).ready(function() {
-  // showPublicHoliday()
-  // fetchAttrachtion()
-  fetchHotels()
+$(document).ready(function () {
+  showPublicHoliday()
+  // fetchData()
+  $('#searchForm').submit(event => {
+    event.preventDefault()
+    address = $('#searchInput').val()
+    fetchData(address)
+  })
 })
