@@ -109,7 +109,9 @@
             </div>
          </div>
         <div class="events">
-          <h1>2020 Indonesian Public Holiday</h1>
+          <div id="year">
+              <h1></h1>
+          </div>
           <ul id="dating">
             
           </ul>
@@ -117,6 +119,47 @@
       </section>
   </div>
 
+
+  <!-- SIGN UP -->
+  <div id="sign-up" >
+      <center>
+          <form style="width:25%;">
+              <h2>Register</h2>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" id="emailRegister" class="form-control"  aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" id="passwordRegister" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <h2 style="margin: 30px auto">OR</h2>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      </center>
+  </div>
+
+  <!-- SIGN IN -->
+  <div id="sign-in" >
+      <center>
+          <form style="width:25%;">
+              <h2>Login</h2>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" id="emailLogin" class="form-control" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" id="passwordLogin" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <h2 style="margin: 30px auto">OR</h2>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+      </center>
+  </div>
   <!-- FOOTER -->
   <footer>
     <!-- <section class="copyright"> -->

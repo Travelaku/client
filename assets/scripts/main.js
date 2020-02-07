@@ -28,9 +28,13 @@ function showPublicHoliday() {
   })
     .done(function(holidayDate) {
       console.log(holidayDate)
+      let currentYear = new Date().getFullYear()
+      $("#public-holiday #year h1").append(`
+      <h1 style="">${currentYear} Indonesian Public Holiday</h1>
+      `)
       let arr = ['JAN', 'FEB','MAR', 'APR', 'MEI', 'JUN', 'JUL','AUG', 'SEP', 'OKT', 'NOV', 'DES']
       holidayDate.data.forEach(element => {
-        let month = +element.date.slice(6,7)
+        let month = +element.date.slice(5,7)
         let tanggal = element.date.slice(8,10)
         $("#public-holiday #dating").append(
           `
