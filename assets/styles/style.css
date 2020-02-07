@@ -198,13 +198,10 @@ body {
     
 }
 
-.copyright {
+footer{
     background-color:#C05805;
     padding: 12px 0;
     font-size:14px;
-}
-
-footer{
     position: static;
     left: 0;
     bottom: 0;
