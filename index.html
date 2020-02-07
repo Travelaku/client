@@ -7,11 +7,78 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id"
     content="23781630798-g5h88k310oh2vrijv70m6p37iv03j5k0.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/style.css">
-  <title>Travelaku</title>
+  <title>TravelAku</title>
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <div id="navbar">
+    <nav class="navbar navbar-expand-lg" style="background-color: #C05805;">
+      <img src="https://image.flaticon.com/icons/svg/776/776541.svg" alt="" width="3%">
+      <a class="navbar-brand" style="color: black;" href="#">TravelAku</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" >Attraction <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown" style="align-items: center;padding-right: 370px;">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Favorite Location
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Bandung</a>
+          <a class="dropdown-item" href="#">Jakarta</a>
+          <a class="dropdown-item" href="#">Bali</a>
+        </div>
+      </div>
+      <!-- <form class="form-inline" style="align-items: center;padding-right: 271px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-warning" type="submit">Search</button>
+      </form> -->
+          <button type="button" class="btn btn-outline-light" id="sign-up">Sign Up</button>
+          <button type="button" class="btn btn-outline-light" id="sign-out">Sign Out</button>
+          <button type="button" class="btn btn-outline-light" id="sign-in">Sign In</button>
+    </nav>
+  </div>
+  
+  <!-- CARD -->
+  <div id="card-home">
+    <div class="card bg-light mb-3" style="width: 20rem;" >
+      <div class="card-body">
+        <h5 id="card-name">Villa lembang</h5>
+        <img src="https://pagguci.com/wp-content/uploads/2018/08/Vila-Swiming-Pool-Di-Lembang-Bandung-864x450.jpg" alt="" width="100%" style="padding-bottom: 10%;">
+        <h6>Rating:</h6>
+        <p id="card-rating">5</p>
+        <h6>Price:</h6>
+        <p id="card-price">800000</p>
+        <a href="#" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+    <div class="card bg-light mb-3" style="width: 20rem;" >
+      <div class="card-body">
+        <h5 id="card-name">Villa lembang</h5>
+        <img src="https://pagguci.com/wp-content/uploads/2018/08/Vila-Swiming-Pool-Di-Lembang-Bandung-864x450.jpg" alt="" width="100%" style="padding-bottom: 10%;">
+        <h6>Rating:</h6>
+        <p id="card-rating">5</p>
+        <h6>Price:</h6>
+        <p id="card-price">800000</p>
+        <a href="#" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  </div>
+  
+<!-- Public-Holiday -->
 
   <div id="public-holiday">
     <section>
@@ -29,9 +96,27 @@
         </div>
       </section>
   </div>
-  
+
+  <!-- FOOTER -->
+  <footer>
+    <section class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 ">
+						<div class="text-center text-white">
+							 <font color="black">&copy; 2018 TravelAku. All Rights Reserved. </font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+  </footer>
 
 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="./assets/scripts/main.js"></script>
