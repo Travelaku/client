@@ -189,13 +189,68 @@ function fetchHotels(hotels) {
   })
 }
 
+function signIn() {
+  // SHOW
+  $('#sign-in').show()
+  $('#sign-up-navbar').show()
+  // HIDE
+  $('#sign-up').hide()
+  $('#sign-in-navbar').hide()
+  $('#sign-out-navbar').hide()
+  $('#public-holiday').hide()
+  $('#home-navbar').hide()
+  $('#explore-navbar').hide()
+  $('.cards').hide()
+}
 
-$(document).ready(function () {
-  showPublicHoliday()
-  // fetchData()
-  $('#searchForm').submit(event => {
-    event.preventDefault()
-    address = $('#searchInput').val()
-    fetchData(address)
-  })
-})
+function signUp() {
+  // SHOW
+  $('#sign-up').show()
+  $('#sign-in-navbar').show()
+  // HIDE
+  $('#sign-in').hide()
+  $('#sign-up-navbar').hide()
+  $('#sign-out-navbar').hide()
+  $('#public-holiday').hide()
+  $('#home-navbar').hide()
+  $('#explore-navbar').hide()
+  $('.cards').hide()
+}
+
+function home() {
+  // SHOW
+  $('#home-navbar').show()
+  $('#explore-navbar').show()
+  $('#public-holiday').show()
+  // HIDE
+
+  $(document).ready(function () {
+    showPublicHoliday()
+    // fetchData()
+    $('#searchForm').submit(event => {
+      event.preventDefault()
+      address = $('#searchInput').val()
+      fetchData(address)
+    })
+  }
+
+// $(document).ready(function() {
+//   signIn()
+//   // showPublicHoliday()
+//   // fetchAttrachtion()
+//   $('#sign-in-navbar').on('click',()=>{
+//     signIn()
+//     $('#signin-submit').click(()=>{
+//       Swal.fire(
+//         'Good job!',
+//         'You clicked the button!',
+//         'success'
+//       )
+//     })
+//   })
+//   $('#sign-up-navbar').on('click',()=>{
+//     signUp()
+//   })
+
+//   fetchHotels()
+// })

@@ -19,7 +19,8 @@
   <div id="navbar">
     <nav class="navbar navbar-expand-lg" style="background-color: #C05805;">
       <img src="https://image.flaticon.com/icons/svg/776/776541.svg" alt="" width="3%">
-      <a class="navbar-brand" style="color: black;" href="#">TravelAku</a>
+
+      <h2>TravelAku</h2>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,10 +28,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item active" id="home-navbar">
             <a class="nav-link" href="#">Home </a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item active" id="explore-navbar">
             <a class="nav-link" href="#">Explore </a>
           </li>
         </ul>
@@ -98,7 +99,7 @@
           <label for="exampleInputPassword1">Password</label>
           <input type="password" id="passwordRegister" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="signup-submit">Submit</button>
       </form>
       <h2 style="margin: 30px auto">OR</h2>
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -118,7 +119,7 @@
           <label for="exampleInputPassword1">Password</label>
           <input type="password" id="passwordLogin" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="signin-submit">Submit</button>
       </form>
       <h2 style="margin: 30px auto">OR</h2>
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -141,7 +142,6 @@
   </footer>
 
 
-
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -154,6 +154,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="./assets/scripts/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
