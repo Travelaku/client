@@ -102,7 +102,7 @@ function fetchHotels(){
     console.log(attractions)
     attractions.forEach(el=>{
       if(el){
-        $("#card-attraction").append(
+        $("#card-hotels").append(
           `
           <div class="col-md-4">
             <div class="card bg-light mb-4" style="height:550px;" >
