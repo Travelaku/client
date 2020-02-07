@@ -161,7 +161,7 @@ function home() {
   $('#explore-navbar').show()
   $('#public-holiday').show()
   // HIDE
-  
+
 }
 
 $(document).ready(function() {
@@ -170,9 +170,17 @@ $(document).ready(function() {
   // fetchAttrachtion()
   $('#sign-in-navbar').on('click',()=>{
     signIn()
+    $('#signin-submit').click(()=>{
+      Swal.fire(
+        'Good job!',
+        'You clicked the button!',
+        'success'
+      )
+    })
   })
   $('#sign-up-navbar').on('click',()=>{
     signUp()
   })
+  
   fetchHotels()
 })
