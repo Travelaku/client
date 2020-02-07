@@ -176,12 +176,14 @@ section .events ul li .details a:hover {
 
 }
 
+
 body {
     background-image: url("https://wonderfulengineering.com/wp-content/uploads/2014/05/airplane-wallpaper-3.jpg") ;
-    /* -webkit-background-size: cover; */
-    background-size: cover;
-    width: 100vw;
-}
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
 
 .navbar{
     width: 100vw;
@@ -220,5 +222,5 @@ footer{
 
 .nav-link{
     color: black;
-    
+
 }
