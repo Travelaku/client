@@ -33,33 +33,29 @@
           </li>
         </ul>
       </div>
-      <div class="dropdown" style="align-items: center;padding-right: 370px;">
-        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Favorite Location
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Bandung</a>
-          <a class="dropdown-item" href="#">Jakarta</a>
-          <a class="dropdown-item" href="#">Bali</a>
-        </div>
-      </div>
-      <!-- <form class="form-inline" style="align-items: center;padding-right: 271px;">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-warning" type="submit">Search</button>
-      </form> -->
           <button type="button" class="btn btn-outline-light" id="sign-up">Sign Up</button>
           <button type="button" class="btn btn-outline-light" id="sign-out">Sign Out</button>
           <button type="button" class="btn btn-outline-light" id="sign-in">Sign In</button>
     </nav>
   </div>
   
+  <div id="search-location">
+    <h3>Explore by Location</h3>
+    <form class="form-inline" style="align-items: center;padding-right: 271px;">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="location">
+      <button class="btn btn-warning" type="submit">Search</button>
+    </form>
+  </div>
+
   <!-- CARD -->
   <div >
+    <h2>Attractions</h2>
     <div id="card-attraction" class="row" style="display: flex; justify-content: center; width: 100%;">
     </div>
   </div>
   
   <div >
+    <h2>Hotel and Accomodation</h2>
     <div id="card-hotels" class="row" style="display: flex; justify-content: center; width: 100%;">
     </div>
   </div>
@@ -79,7 +75,6 @@
               <h1></h1>
           </div>
           <ul id="dating">
-            
           </ul>
         </div>
       </section>
